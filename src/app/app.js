@@ -9,7 +9,7 @@ var winnerX, winnerO;
 var restartGame = document.querySelector(".restartGame");
 var body = document.querySelector("body");
 var winner = document.querySelector(".winner");
-
+currentPlayer.textContent = playerState;
 
 restartGame.addEventListener("click", (event) => {
   squares.forEach(elem => elem.innerHTML = "");
@@ -32,8 +32,6 @@ squares.forEach(function(element) {
     }
   })
 })
-
-currentPlayer.textContent = playerState;
 
 function checkIfWinner() {
   winnerX = winningCombinations.some(function(combo) {
